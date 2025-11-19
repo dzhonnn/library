@@ -12,7 +12,7 @@ import WallpapersExplorer from './components/Elements/WallpapersExplorerComponen
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AppContainer>
-      <Container className="flex flex-col gap-4 h-screen my-8" style={{ maxWidth: '1160px' }}>
+      <Container className="flex flex-col gap-4 min-h-screen my-4" style={{ maxWidth: '1160px' }}>
         <h1 style={{ fontWeight: 'bold' }}>Library</h1>
         <GridContainer columns={2} gap="2rem">
           <CardContainer className="flex flex-col gap-4" title="Colors">
