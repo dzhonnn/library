@@ -65,7 +65,9 @@ function WallpapersExplorer() {
       {wallpapers.map((img, index) => (
         <a key={img.name} href={img.url} download>
           <p
-            ref={(el) => (refs.current[img.name] = el)}
+            ref={(el) => {
+              refs.current[img.name] = el
+            }}
             data-original={img.url}
             className="border-b border-gray-500 px-4 file"
             style={
