@@ -1,0 +1,28 @@
+.file {
+  position: relative;
+  cursor: pointer;
+}
+
+.file:hover {
+  background-color: rgba(60, 60, 60) !important;
+}
+
+.file::after {
+  --height: calc(400px / 16 * 9);
+
+  content: '';
+  position: absolute;
+  top: calc(0px - var(--height) - 10px);
+  left: 1rem;
+  width: 400px;
+  height: var(--height);
+  border: 2px solid white;
+  display: none;
+  aspect-ratio: 16/9;
+  background-image: var(--url);
+  background-size: cover;
+}
+
+.file:hover::after {
+  display: block;
+}

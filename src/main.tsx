@@ -7,11 +7,12 @@ import CardContainer from './components/Containers/CardContainer'
 import ColorSwatch from './components/Elements/ColorSwatchComponent'
 import GridContainer from './components/Containers/GridContainerComponent'
 import Blank from './components/Elements/BlankComponent'
+import WallpapersExplorer from './components/Elements/WallpapersExplorerComponent'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AppContainer>
-      <Container className="flex flex-col gap-4 h-screen py-8" style={{ maxWidth: '1160px' }}>
+      <Container className="flex flex-col gap-4 h-screen my-8" style={{ maxWidth: '1160px' }}>
         <h1 style={{ fontWeight: 'bold' }}>Library</h1>
         <GridContainer columns={2} gap="2rem">
           <CardContainer className="flex flex-col gap-4" title="Colors">
@@ -24,6 +25,9 @@ createRoot(document.getElementById('root')!).render(
           </CardContainer>
           <Blank />
         </GridContainer>
+        <CardContainer className="flex flex-col gap-4" title="Wallpapers">
+          <WallpapersExplorer />
+        </CardContainer>
       </Container>
     </AppContainer>
   </StrictMode>
